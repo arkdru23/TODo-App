@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+}
+
+body {
+    background-color: orange;
+}
+
+.app {
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+.app-form {
+    font-family: arial;
+background-color: #fff;
+padding: 2rem;
+border-radius: 0.6rem;
+}
+
+.app-form-row {
+    overflow: hidden;
+}
+
+.app-form-label {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.app-form-message {
+    padding: 2rem;
+    height: 20rem;
+    width: 100%;
+    border: 1.5px solid black;
+    margin-bottom: 1rem;
+    resize: vertical;
+    font-size: 2rem;
+}
+
+.app-form-button {
+    float:right;
+    padding: 0.8rem 2.5rem;
+    font-size: 2rem;
+    color: #fff;
+    background-color: orangered;
+    border: none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: 0.4s;
+
+}
+
+.app-form-button:hover {
+color:black
+}
+
+.app-list {
+    background-color: #fff;
+    margin: 1.5rem 0;
+    border: 1.5px solid black;
+    padding: 1rem 2rem;
+}
+
+.app-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.app-list-search-form {
+    width: 50%;
+    font-size: 2rem;
+}
+
+.app-list-search {
+    width: 100%;
+    padding: .5rem;
+    border: 1px solid black;
+}
+
+.app-list-title {
+    font-size: 2rem;
+}
+
+.app-element {
+    border-top: 1px solid #ddd;
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.app-element-bar {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.app-element-date {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.app-element-button {     
+    border: 0;
+    font-size: 3.5rem;
+    background-color:white;
+    padding: 0;
+    cursor: pointer;
+    /* margin-top: 4rem; */
+    transition: 0.5s;
+
+
+}
+.app-element-button:hover {
+    color:orangered;
+}
+
+.app-element-text {
+    list-style: none;
+    font-size: 1.4rem;
+    width: 90%;
+}
+
+

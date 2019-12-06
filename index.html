@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TO-DO-APP</title>
+    <script src="https://kit.fontawesome.com/3c4af0d2e0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <form action="" class="app-form" id="appForm">
+            <div class="app-form-row">
+                <label for="appMessage" class="app-form-label">Enter the task content</label>
+                <textarea class="app-form-message" name="appMessage" id="appMessage"></textarea>
+            </div>
+            <div class="app-form-row">
+                <button type="submit" class="button app-form-button">Add</button>
+            </div>
+        </form>
+        <section class="app-list">
+            <header class="app-list-header">
+                <h2 class="app-list-title">Done Task</h2>
+
+                <form class="app-list-search-form">
+                    <input type="search" id="appSearch" class="app-list-search">
+                </form>
+            </header>
+
+            <div class="app-list-done" id="appListDone">
+                <div class="app-element">
+                    <div class="app-element-bar">
+                        <h3 class="app-element-date">20-10-2016 godz. 16:32</h3>
+                        <button class="app-element-button" title="Delete task">
+                            <i class="fas fa-minus-circle"></i>
+                        </button>
+                    </div>
+                    <p class="app-element-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic corrupti impedit cumque itaque!
+                        Quis quas sapiente consectetur tenetur! Dignissimos quod voluptate earum necessitatibus ipsa
+                        magnam doloremque veritatis laboriosam? Voluptatibus, laudantium.
+                    </p>
+                </div>
+            </div>
+
+
+        </section>
+    </div>
+
+</body>
+<script src="scripts.js"></script>
+
+</html>
