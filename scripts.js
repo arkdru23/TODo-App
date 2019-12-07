@@ -28,7 +28,7 @@ const addTask = (text) => {
     appElement.appendChild(appElementBar);
     appElement.appendChild(appElementText);
 
-    appListDone.appendChild(appElement);
+    appTaskList.appendChild(appElement);
 
 
 }
@@ -41,9 +41,10 @@ const addTask = (text) => {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    const appListDone = document.querySelector('#appListDone');
+    const appTaskList = document.querySelector('#appTaskList');
     const appForm = document.querySelector('#appForm');
     const appSearch = document.querySelector('#appSearch')
+    const AppDoneList = document.querySelector('#appDoneList')
 
 
 
@@ -57,16 +58,21 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     })
 
-    appListDone.addEventListener('click', (e) => {
+    appTaskList.addEventListener('click', (e) => {
         if (e.target.className === 'fas fa-minus-circle') {
             const todoElem = e.target.closest('.app-element');
-            todoElem.parentNode.removeChild(todoElem)
+            let delateTask = todoElem.parentNode.removeChild(todoElem)
+            AppDoneList.appendChild(delateTask);
+            const btnsDelate = AppDoneList.querySelectorAll('button');
+
+            btnsDelate.forEach(btn => btn.innerText = '')
+
         }
     })
 
     appSearch.addEventListener('input', (e) => {
         const value = e.target.value.toLowerCase();
-        const elements = [...appListDone.querySelectorAll('.app-element')]
+        const elements = [...appTaskList.querySelectorAll('.app-element')]
 
         elements.forEach(element => {
 
