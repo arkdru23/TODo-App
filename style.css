@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
 
 }
 
@@ -9,8 +10,9 @@ body {
 }
 
 .app {
-    max-width: 90rem;
+    max-width: 180rem;
     margin: 0 auto;
+    
 }
 
 .app-form {
@@ -26,9 +28,12 @@ border-radius: 0.6rem;
 
 .app-form-label {
     display: block;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
+    font-weight: 600;
 }
+
+
 
 .app-form-message {
     padding: 2rem;
@@ -85,12 +90,21 @@ color:black
 .app-list-title , .app-done-task-title{
     font-size: 2rem;
 }
+.app-task-list {
+    position: relative;
+    
+}
+.app-done-task-list { 
+    min-height: 50rem;
+}
 
 .app-element {
     border-top: 1px solid #ddd;
     margin-top: 1rem;
     padding-top: 1.5rem;
     padding-bottom: 2rem;
+    position: relative;
+    border-radius: 4%;
 }
 
 .app-element-bar {
@@ -110,7 +124,7 @@ color:black
 .app-element-button {     
     border: 0;
     font-size: 3.5rem;
-    background-color:white;
+    background-color: transparent;
     padding: 0;
     cursor: pointer;
     /* margin-top: 4rem; */
@@ -128,4 +142,7 @@ color:black
     width: 90%;
 }
 
-
+.hovered {
+    background-color: #f4f4f4;
+    border-style: dashed;
+}

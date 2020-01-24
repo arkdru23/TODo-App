@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TO-DO-APP</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3c4af0d2e0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <p class="status"></p>
     <div class="app">
         <form action="" class="app-form" id="appForm">
             <div class="app-form-row">
@@ -21,6 +23,7 @@
                 <button type="submit" class="button app-form-button">Add</button>
             </div>
         </form>
+
         <section class="app-list">
             <header class="app-list-header">
                 <h2 class="app-list-title">Task</h2>
@@ -33,7 +36,7 @@
             <div class="app-task-list" id="appTaskList">
                 <div class="app-element">
                     <div class="app-element-bar">
-                        <h3 class="app-element-date">20-10-2016 godz. 16:32</h3>
+                        <h3 class="app-element-date">Thu 2 January-2020 godz. 19:15</h3>
                         <button class="app-element-button" title="Delete task">
                             <i class="fas fa-minus-circle"></i>
                         </button>
@@ -45,15 +48,18 @@
                     </p>
                 </div>
             </div>
+
         </section>
 
-        <section class="app-done-task-list" id="appDoneList">
+        <section class="app-done-task-list">
             <header class="app-done-task-header">
                 <h2 class="app-done-task-title">Done Task</h2>
             </header>
-
+            <div id="appDoneList"></div>
         </section>
     </div>
+
+
 </body>
 <script src="scripts.js">
 </script>

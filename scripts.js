@@ -1,5 +1,38 @@
 
+function newDate() {
 
+    const date = new Date();
+    const months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+    ];
+    const days = [
+        'Sun',
+        'Mon',
+        'Tue',
+        'Wed',
+        'Thu',
+        'Fri',
+        'Sat'
+    ]
+    const monthName = months[date.getMonth()];
+    const dayName = days[date.getDay()];
+
+    const dateText = `${dayName} ${date.getDate()} ${monthName}-${date.getFullYear()} godz. ${date.getHours()}:${date.getMinutes()}`
+
+    return dateText;
+
+}
 
 const addTask = (text) => {
     const appElement = document.createElement('div');
@@ -10,9 +43,10 @@ const addTask = (text) => {
 
     const appElementDate = document.createElement('h3');
     appElementDate.classList.add('app-element-date');
-    const date = new Date();
-    const dateText = `${date.getMonth() + 1 < 10 ? '0' + date.getMonth() + 1 : date.getMonth() + 1}-${date.getDay() < 10 ? '0' + date.getDay() : date.getDay()}-${date.getFullYear()} godz. ${date.getHours() < 10 ? '0' + date.getHours() : date.getHours()}:${date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()}`
-    appElementDate.innerText = dateText;
+
+
+
+    appElementDate.innerText = newDate()
 
     const appElementBtn = document.createElement('button');
     appElementBtn.classList.add('app-element-button');
@@ -25,6 +59,7 @@ const addTask = (text) => {
     appElementText.classList.add('app-element-text');
     appElementText.textContent = text;
 
+
     appElement.appendChild(appElementBar);
     appElement.appendChild(appElementText);
 
@@ -34,17 +69,13 @@ const addTask = (text) => {
 }
 
 
-
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
     const appTaskList = document.querySelector('#appTaskList');
     const appForm = document.querySelector('#appForm');
     const appSearch = document.querySelector('#appSearch')
-    const AppDoneList = document.querySelector('#appDoneList')
+    const appDoneList = document.querySelector('#appDoneList')
+
+
 
 
 
@@ -62,10 +93,19 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.target.className === 'fas fa-minus-circle') {
             const todoElem = e.target.closest('.app-element');
             let delateTask = todoElem.parentNode.removeChild(todoElem)
-            AppDoneList.appendChild(delateTask);
-            const btnsDelate = AppDoneList.querySelectorAll('button');
+            delateTask.style.top = 0
+            delateTask.style.left = 0
+            appDoneList.appendChild(delateTask);
+            const btnsDelate = appDoneList.querySelectorAll('button');
 
             btnsDelate.forEach(btn => btn.innerText = '')
+            const allh3 = document.querySelectorAll('h3');
+
+            allh3.forEach(h3 => {
+
+                const date = newDate();
+
+            })
 
         }
     })
@@ -86,9 +126,18 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         })
 
-
-
     })
 
 
+
+
+
+
 })
+
+
+
+
+
+
+
